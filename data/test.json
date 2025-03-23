@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "icon": "sport",
+    "name": "ANJUMANIA",
+    "target": 10,
+    "days": [
+      {
+        "description": "test1"
+      },
+      {
+        "description": "test2"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "icon": "water",
+    "name": "DRINK VODKA TAA BLEAT",
+    "target": 5,
+    "days": [
+      {
+        "description": "test12"
+      },
+      {
+        "description": "test22"
+      }
+    ]
+  }
+]

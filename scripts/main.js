@@ -68,17 +68,18 @@ function rerenderBody(activeHabit) {
                     <button class="card__delete">
                         <img src="img/shape.svg" alt="delete"/>
                     </button>`;
-        deleteCardEvent(activeHabit, element);
+        deleteCardEvent(activeHabit, element, index);
         page.content.cards.appendChild(element);
     }
     addCardForm(activeHabit);
 }
 
-function deleteCardEvent(activeHabit, element) {
+function deleteCardEvent(activeHabit, element, index) {
     const deleteButton = element.querySelector('.card__delete');
     deleteButton.addEventListener('click', () => {
         activeHabit.days.splice(index, 1);
         saveData();
+        rerenderHead(activeHabit);
         rerenderBody(activeHabit);
     });
 }
@@ -101,6 +102,7 @@ function addCardForm(activeHabit) {
         if (newDescription) {
             activeHabit.days.push({ description: newDescription });
             saveData();
+            rerenderHead(activeHabit);
             rerenderBody(activeHabit);
         } else {
             input.classList.add('input_error')
